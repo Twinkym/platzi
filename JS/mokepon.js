@@ -1,8 +1,8 @@
-function selecionarMascotaJugador() {
+function seleccionarMascotaJugador() {
   alert("ELEGISTE TU MASCOTA");
 }
-let botonMascotaJuagador = document.getElementById("boton-mascota");
+let botonMascotaJugador = document.getElementById("boton-mascota");
 botonMascotaJugador = document.addEventListener(
   "click",
-  selecionarMascotaJugador
+  seleccionarMascotaJugador
 );
