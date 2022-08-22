@@ -42,47 +42,47 @@ function seleccionarMascotaEnemigo() {
   } else {
     spanMascotaEnemigo.innerHTML = "Ratigueya";
   }
-
-  function ataqueFuego() {
-    ataqueJugador = "FUEGO";
-    ataqueAleatorioEnemigo();
-  }
-  function ataqueAgua() {
-    ataqueJugador = "AGUA";
-    ataqueAleatorioEnemigo();
-  }
-  function ataqueTierra() {
-    ataqueJugador = "TIERRA";
-    ataqueAleatorioEnemigo();
-  }
-
-  function ataqueAleatorioEnemigo() {
-    let ataqueAleatorio = aleatorio(1, 3);
-
-    if (ataqueAleatorio == 1) {
-      ataqueEnemigo = "FUEGO";
-    } else if (ataqueAleatorio == 2) {
-      ataqueEnemigo = "AGUA";
-    } else {
-      ataqueEnemigo = "TIERRA";
-    }
-    crearMensaje();
-  }
-
-  function crearMensaje() {
-    let sectionMensajes = document.getElementById("mensajes");
-
-    let parrafo = document.createElement("p");
-    parrafo.innerHTML =
-      "Tu mascota atacó con " +
-      ataqueJugador +
-      "la mascota del enemigo atacó con " +
-      ataqueEnemigo +
-      "- PENDIENTE";
-    sectionMensajes.appendChild(parrafo);
-  }
-  function aleatorio(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
 }
+function ataqueFuego() {
+  ataqueJugador = "FUEGO";
+  ataqueAleatorioEnemigo();
+}
+function ataqueAgua() {
+  ataqueJugador = "AGUA";
+  ataqueAleatorioEnemigo();
+}
+function ataqueTierra() {
+  ataqueJugador = "TIERRA";
+  ataqueAleatorioEnemigo();
+}
+
+function ataqueAleatorioEnemigo() {
+  let ataqueAleatorio = aleatorio(1, 3);
+
+  if (ataqueAleatorio == 1) {
+    ataqueEnemigo = "FUEGO";
+  } else if (ataqueAleatorio == 2) {
+    ataqueEnemigo = "AGUA";
+  } else {
+    ataqueEnemigo = "TIERRA";
+  }
+  crearMensaje();
+}
+
+function crearMensaje() {
+  let sectionMensajes = document.getElementById("mensajes");
+
+  let parrafo = document.createElement("p");
+  parrafo.innerHTML =
+    "Tu mascota atacó con " +
+    ataqueJugador +
+    "la mascota del enemigo atacó con " +
+    ataqueEnemigo +
+    "- PENDIENTE";
+  sectionMensajes.appendChild(parrafo);
+}
+function aleatorio(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 window.addEventListener("load", iniciarJuego);
